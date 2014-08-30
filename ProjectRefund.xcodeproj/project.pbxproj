@@ -10,6 +10,8 @@
 		904FFC9319B2623D00C46A68 /* RecieptItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9219B2623D00C46A68 /* RecieptItem.m */; };
 		904FFC9619B2641700C46A68 /* RecieptItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9519B2641700C46A68 /* RecieptItemStore.m */; };
 		904FFC9919B2696800C46A68 /* RecieptImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9819B2696800C46A68 /* RecieptImageStore.m */; };
+		904FFC9C19B2760C00C46A68 /* RecieptItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9B19B2760C00C46A68 /* RecieptItemTableViewController.m */; };
+		904FFC9F19B27B2200C46A68 /* RecieptDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9E19B27B2200C46A68 /* RecieptDetailViewController.m */; };
 		FD1F458019B242410099E89E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F457F19B242410099E89E /* Foundation.framework */; };
 		FD1F458219B242410099E89E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F458119B242410099E89E /* CoreGraphics.framework */; };
 		FD1F458419B242410099E89E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F458319B242410099E89E /* UIKit.framework */; };
@@ -45,6 +47,10 @@
 		904FFC9519B2641700C46A68 /* RecieptItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptItemStore.m; sourceTree = "<group>"; };
 		904FFC9719B2696800C46A68 /* RecieptImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieptImageStore.h; sourceTree = "<group>"; };
 		904FFC9819B2696800C46A68 /* RecieptImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptImageStore.m; sourceTree = "<group>"; };
+		904FFC9A19B2760C00C46A68 /* RecieptItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieptItemTableViewController.h; sourceTree = "<group>"; };
+		904FFC9B19B2760C00C46A68 /* RecieptItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptItemTableViewController.m; sourceTree = "<group>"; };
+		904FFC9D19B27B2200C46A68 /* RecieptDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieptDetailViewController.h; sourceTree = "<group>"; };
+		904FFC9E19B27B2200C46A68 /* RecieptDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptDetailViewController.m; sourceTree = "<group>"; };
 		FD1F457C19B242410099E89E /* ProjectRefund.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRefund.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1F457F19B242410099E89E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD1F458119B242410099E89E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,6 +148,10 @@
 				904FFC9519B2641700C46A68 /* RecieptItemStore.m */,
 				904FFC9719B2696800C46A68 /* RecieptImageStore.h */,
 				904FFC9819B2696800C46A68 /* RecieptImageStore.m */,
+				904FFC9A19B2760C00C46A68 /* RecieptItemTableViewController.h */,
+				904FFC9B19B2760C00C46A68 /* RecieptItemTableViewController.m */,
+				904FFC9D19B27B2200C46A68 /* RecieptDetailViewController.h */,
+				904FFC9E19B27B2200C46A68 /* RecieptDetailViewController.m */,
 			);
 			path = ProjectRefund;
 			sourceTree = "<group>";
@@ -279,10 +289,12 @@
 			files = (
 				904FFC9919B2696800C46A68 /* RecieptImageStore.m in Sources */,
 				904FFC9319B2623D00C46A68 /* RecieptItem.m in Sources */,
+				904FFC9C19B2760C00C46A68 /* RecieptItemTableViewController.m in Sources */,
 				904FFC9619B2641700C46A68 /* RecieptItemStore.m in Sources */,
 				FD1F459019B242410099E89E /* PRAppDelegate.m in Sources */,
 				FD1F45BC19B244640099E89E /* PRCamPreviewView.m in Sources */,
 				FD1F459919B242410099E89E /* PRViewController.m in Sources */,
+				904FFC9F19B27B2200C46A68 /* RecieptDetailViewController.m in Sources */,
 				FD1F458C19B242410099E89E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
