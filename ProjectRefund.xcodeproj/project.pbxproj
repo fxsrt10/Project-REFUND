@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904FFC9319B2623D00C46A68 /* RecieptItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9219B2623D00C46A68 /* RecieptItem.m */; };
+		904FFC9619B2641700C46A68 /* RecieptItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9519B2641700C46A68 /* RecieptItemStore.m */; };
+		904FFC9919B2696800C46A68 /* RecieptImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 904FFC9819B2696800C46A68 /* RecieptImageStore.m */; };
 		FD1F458019B242410099E89E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F457F19B242410099E89E /* Foundation.framework */; };
 		FD1F458219B242410099E89E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F458119B242410099E89E /* CoreGraphics.framework */; };
 		FD1F458419B242410099E89E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F458319B242410099E89E /* UIKit.framework */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		904FFC9119B2623D00C46A68 /* RecieptItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieptItem.h; sourceTree = "<group>"; };
+		904FFC9219B2623D00C46A68 /* RecieptItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptItem.m; sourceTree = "<group>"; };
+		904FFC9419B2641700C46A68 /* RecieptItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieptItemStore.h; sourceTree = "<group>"; };
+		904FFC9519B2641700C46A68 /* RecieptItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptItemStore.m; sourceTree = "<group>"; };
+		904FFC9719B2696800C46A68 /* RecieptImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecieptImageStore.h; sourceTree = "<group>"; };
+		904FFC9819B2696800C46A68 /* RecieptImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecieptImageStore.m; sourceTree = "<group>"; };
 		FD1F457C19B242410099E89E /* ProjectRefund.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRefund.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1F457F19B242410099E89E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD1F458119B242410099E89E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +136,12 @@
 				FD1F459819B242410099E89E /* PRViewController.m */,
 				FD1F459A19B242410099E89E /* Images.xcassets */,
 				FD1F458619B242410099E89E /* Supporting Files */,
+				904FFC9119B2623D00C46A68 /* RecieptItem.h */,
+				904FFC9219B2623D00C46A68 /* RecieptItem.m */,
+				904FFC9419B2641700C46A68 /* RecieptItemStore.h */,
+				904FFC9519B2641700C46A68 /* RecieptItemStore.m */,
+				904FFC9719B2696800C46A68 /* RecieptImageStore.h */,
+				904FFC9819B2696800C46A68 /* RecieptImageStore.m */,
 			);
 			path = ProjectRefund;
 			sourceTree = "<group>";
@@ -208,6 +223,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = GeauxHack;
 				TargetAttributes = {
+					FD1F457B19B242410099E89E = {
+						DevelopmentTeam = 8G4H6268W7;
+					};
 					FD1F459F19B242410099E89E = {
 						TestTargetID = FD1F457B19B242410099E89E;
 					};
@@ -259,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904FFC9919B2696800C46A68 /* RecieptImageStore.m in Sources */,
+				904FFC9319B2623D00C46A68 /* RecieptItem.m in Sources */,
+				904FFC9619B2641700C46A68 /* RecieptItemStore.m in Sources */,
 				FD1F459019B242410099E89E /* PRAppDelegate.m in Sources */,
 				FD1F45BC19B244640099E89E /* PRCamPreviewView.m in Sources */,
 				FD1F459919B242410099E89E /* PRViewController.m in Sources */,
@@ -397,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProjectRefund/ProjectRefund-Prefix.pch";
 				INFOPLIST_FILE = "ProjectRefund/ProjectRefund-Info.plist";
@@ -410,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProjectRefund/ProjectRefund-Prefix.pch";
 				INFOPLIST_FILE = "ProjectRefund/ProjectRefund-Info.plist";
@@ -477,6 +500,7 @@
 				FD1F45B319B242410099E89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD1F45B419B242410099E89E /* Build configuration list for PBXNativeTarget "ProjectRefundTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +509,7 @@
 				FD1F45B619B242410099E89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
