@@ -7,12 +7,16 @@
 //
 
 #import "PRAppDelegate.h"
+#import "RecieptItemTableViewController.h"
+#import "PRViewController.h"
 
 @implementation PRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //PRViewController *prViewController=[[PRViewController alloc]]
+    
     return YES;
 }
 							

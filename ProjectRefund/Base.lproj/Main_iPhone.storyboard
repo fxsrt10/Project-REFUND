@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5tI-2O-Djw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gxB-2n-6Ik">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="6jO-Br-Bcl">
-            <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="5tI-2O-Djw" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6br-O2-qpI">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="gxB-2n-6Ik" kind="relationship" relationship="rootViewController" id="6YC-g7-CgD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nVf-jm-I68" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-682" y="542"/>
-        </scene>
         <!--View Controller - Scanner-->
         <scene sceneID="gTC-eO-Iud">
             <objects>
@@ -66,6 +51,8 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scanner" id="kxs-JU-90K"/>
+                    <navigationItem key="navigationItem" id="TVS-jY-eCK"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="previewView" destination="Bpe-Co-gXX" id="GTY-e6-6T2"/>
                         <outlet property="stillButton" destination="RT8-Oh-Y1t" id="IgD-PK-zD6"/>
@@ -73,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg7-sq-BSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="215"/>
+            <point key="canvasLocation" x="605" y="175"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aH6-8G-z1c">
@@ -87,39 +74,100 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mHE-mF-SAI" kind="relationship" relationship="viewControllers" id="Fu1-Ar-Jbx"/>
-                        <segue destination="oDN-h8-kbN" kind="relationship" relationship="viewControllers" id="9uz-oL-Jgg"/>
+                        <segue destination="rPc-bt-fqa" kind="relationship" relationship="viewControllers" id="omk-ue-lNL"/>
+                        <segue destination="jGg-0t-z8g" kind="relationship" relationship="viewControllers" id="Eay-Ny-qgY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xby-Fz-bjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263" y="542"/>
+            <point key="canvasLocation" x="-293" y="540"/>
         </scene>
-        <!--Table View Controller - Reciept List-->
-        <scene sceneID="XgB-oi-kzb">
+        <!--Navigation Controller - Item-->
+        <scene sceneID="0za-ym-JOo">
             <objects>
-                <viewController id="oDN-h8-kbN" customClass="UITableViewController" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="jGg-0t-z8g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="N4f-qc-ht9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nyv-kK-csG">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XuB-JW-MIX" kind="relationship" relationship="rootViewController" id="a2I-93-T00"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6S-ld-Scq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="926"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="AgD-5M-pBl">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="rPc-bt-fqa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="NzB-kS-CZv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OyY-nF-vgO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mHE-mF-SAI" kind="relationship" relationship="rootViewController" id="FNI-6i-Rs0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SdV-Qk-ZI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="175"/>
+        </scene>
+        <!--Reciept Item Table View Controller - Reciepts-->
+        <scene sceneID="gVB-YA-32c">
+            <objects>
+                <tableViewController title="Reciepts" id="XuB-JW-MIX" customClass="RecieptItemTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="V1x-Zy-Yvl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="NGk-dW-7rU">
+                                <rect key="frame" x="0.0" y="86" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGk-dW-7rU" id="VsP-ba-Gts">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XuB-JW-MIX" id="3fe-A8-zOT"/>
+                            <outlet property="delegate" destination="XuB-JW-MIX" id="tNh-o6-43t"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="0eZ-ph-BR6"/>
+                    <navigationItem key="navigationItem" title="Receipts" id="LTT-Bf-iq3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wRc-HS-J6B">
+                            <connections>
+                                <action selector="addRow:" destination="XuB-JW-MIX" id="6UY-AL-dCO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcV-Ii-1Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605" y="926"/>
+        </scene>
+        <!--Reciept Detail View Controller-->
+        <scene sceneID="3Pk-Lu-Ydx">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="P3r-Pc-DUg" customClass="RecieptDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I71-wz-qDq"/>
-                        <viewControllerLayoutGuide type="bottom" id="f3G-Ji-xT5"/>
+                        <viewControllerLayoutGuide type="top" id="gyR-Xx-ymf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cjb-qd-c71"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IN7-gU-NVz">
+                    <view key="view" contentMode="scaleToFill" id="g8E-Jt-6nl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y3G-Y9-T8V">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="517"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reciept List" id="JQL-to-Xar"/>
+                    <navigationItem key="navigationItem" id="cUu-o3-H0H"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7KT-aX-Xff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYJ-RE-1dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="862"/>
+            <point key="canvasLocation" x="991" y="926"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

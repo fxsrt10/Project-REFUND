@@ -19,28 +19,9 @@
 
 @implementation RecieptItemTableViewController
 
-
-- (instancetype) init
+- (void)awakeFromNib
 {
-    self = [super initWithStyle:UITableViewStylePlain];
-    if (self) {
-        UINavigationItem *navItem = self.navigationItem;
-        navItem.title = @"Homepwner";
-        
-        UIBarButtonItem *ubbir = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                               target:self
-                                                                               action:@selector(addRow:)];
-        
-        navItem.rightBarButtonItem = ubbir;
-        
-        navItem.leftBarButtonItem = self.editButtonItem;
-    }
-    
-    return self;
-}
-- (instancetype) initWithStyle:(UITableViewStyle)style
-{
-    return [self init];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -73,6 +54,7 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    
 }
 
 - (IBAction)addRow:(id)sender
@@ -97,6 +79,7 @@
     NSLog(@"In toggle edit mode");
     if (self.isEditing) {
         // turn off the editing mode
+        
         [self setEditing:NO animated:YES];
         // change the title of the button to inform user of state
         [sender setTitle:@"Edit" forState:UIControlStateNormal];
@@ -105,6 +88,7 @@
         // turn on the editing mode
         [self setEditing:YES animated:YES];
         // change the title of the button to inform user of state
+        NSLog(@"In Done Part");
         [sender setTitle:@"Done" forState:UIControlStateNormal];
     }
 }
@@ -171,7 +155,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row != [[[RecieptItemStore sharedStore] allItems] count]) {
-        RecieptDetailViewController *detailView = [[RecieptDetailViewController alloc] init];
+        RecieptDetailViewController *detailView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
         
         NSArray *array = [[RecieptItemStore sharedStore] allItems];
         RecieptItem *item = array[indexPath.row];
