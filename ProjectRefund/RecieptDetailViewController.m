@@ -13,6 +13,9 @@
 
 @interface RecieptDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *paymentTypeLabel;
+@property (weak, nonatomic) IBOutlet UITextField *subtotalTextField;
+@property (weak, nonatomic) IBOutlet UITextField *taxTextField;
+@property (weak, nonatomic) IBOutlet UITextField *totalTextField;
 @end
 
 @implementation RecieptDetailViewController
@@ -25,7 +28,7 @@
     
     if (self.isFromScanner) {
         NSLog(@"yes");
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        //[self.navigationController setNavigationBarHidden:NO animated:YES];
         
         
         UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
@@ -51,8 +54,10 @@
 
 - (void)updateFromParser
 {
-    NSLog(@"%@", self.parser.paymentType);
-    self.paymentTypeLabel.titleLabel.text = self.parser.paymentType;
+    self.subtotalTextField.text = self.subtotal;
+    self.taxTextField.text = self.tax;
+    self.totalTextField.text = self.total;
+    self.paymentTypeLabel.titleLabel.text = self.paymentType;
 }
 
 - (void)cancelImage
@@ -63,7 +68,7 @@
 - (void)saveImage
 {
     if (self.isFromScanner) {
-        [[RecieptItemStore sharedStore] createItemFromParser:self.parser];
+        //[[RecieptItemStore sharedStore] createItemFromParser:self.parser];
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

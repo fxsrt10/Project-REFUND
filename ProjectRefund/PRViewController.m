@@ -67,7 +67,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 {
 	[super viewDidLoad];
 	
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    //[self.navigationController setNavigationBarHidden:YES animated:YES];
     
     // initalize the text parser
     self.parser = [[PRTextParser alloc] init];
@@ -406,7 +406,11 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         {
             self.receiptDetailController = [self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptDetailViewController"];
             self.receiptDetailController.isFromScanner = YES;
-            self.receiptDetailController.parser = [self.parser copy];
+            self.receiptDetailController.itemsArray = [self.parser.itemsArray mutableCopy];
+            self.receiptDetailController.subtotal = [self.parser.subtotal copy];
+            self.receiptDetailController.total = [self.parser.total copy];
+            self.receiptDetailController.tax = [self.parser.tax copy];
+            self.receiptDetailController.paymentType = [self.parser.paymentType copy];
             self.receiptDetailController.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:self.receiptDetailController animated:YES];
         }
@@ -442,7 +446,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [[[UIAlertView alloc] initWithTitle:@"Out With Friends?"
-                                    message:@"Pay Your Share With PayPal"
+                                    message:@"Pay Your Share With PayPal®"
                                    delegate:self
                           cancelButtonTitle:nil
                           otherButtonTitles:@"No", @"Yes", nil] show];

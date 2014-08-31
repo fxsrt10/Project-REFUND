@@ -13,6 +13,12 @@
 @property(nonatomic, strong, readwrite) PayPalConfiguration *payPalConfig;
 @property(nonatomic, strong, readwrite) NSString *environment;
 @property(nonatomic, assign, readwrite) BOOL acceptCreditCards;
+
+// For use in Storyboards
+@property (weak, nonatomic) IBOutlet UIButton *payWithPaypalButton;
+@property (weak, nonatomic) IBOutlet UITextField *amountOfPeopleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *totalBillTextField;
+
 @end
 
 #define kPayPalEnvironment PayPalEnvironmentNoNetwork
@@ -24,7 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"PayPal SDK Demo";
+    [self.navigationItem setTitle:@"PayPal"];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     
     // Set up payPalConfig
     _payPalConfig = [[PayPalConfiguration alloc] init];
@@ -56,7 +63,12 @@
     
     // use default environment, should be Production in real life
     self.environment = kPayPalEnvironment;
-    
+
+    NSLog(@"PayPal iOS SDK version: %@", [PayPalMobile libraryVersion]);
+}
+
+- (IBAction)payWithPaypal:(UIButton *)sender
+{
     PayPalPayment *payment = [[PayPalPayment alloc] init];
     payment.amount = [[NSDecimalNumber alloc] initWithString:@"100.00"];
     payment.currencyCode = @"USD";
@@ -78,8 +90,8 @@
                                                                                                      delegate:self];
     [self presentViewController:paymentViewController animated:YES completion:nil];
     
-    NSLog(@"PayPal iOS SDK version: %@", [PayPalMobile libraryVersion]);
 }
+
 
 #pragma mark PayPalPaymentDelegate methods
 
