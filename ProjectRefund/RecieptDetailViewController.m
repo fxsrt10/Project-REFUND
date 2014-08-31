@@ -9,9 +9,10 @@
 #import "RecieptDetailViewController.h"
 #import "RecieptItem.h"
 #import "RecieptItemStore.h"
+#import "PRTextParser.h"
 
 @interface RecieptDetailViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *paymentTypeLabel;
 @end
 
 @implementation RecieptDetailViewController
@@ -41,6 +42,17 @@
     else {
         
     }
+    
+    //self.parser = [[PRTextParser alloc] init];
+    //self.parser = self.holdParser;
+    
+    [self updateFromParser];
+}
+
+- (void)updateFromParser
+{
+    NSLog(@"%@", self.parser.paymentType);
+    self.paymentTypeLabel.titleLabel.text = self.parser.paymentType;
 }
 
 - (void)cancelImage

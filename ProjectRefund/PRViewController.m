@@ -8,7 +8,8 @@
 
 #import "PRViewController.h"
 #import "RecieptDetailViewController.h"
-#include "PRTextParser.h"
+#import "PRTextParser.h"
+#import "PRPayPalViewController.h"
 
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
@@ -46,6 +47,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 @property (nonatomic) id runtimeErrorHandlingObserver;
 @property (nonatomic, strong) PRTextParser *parser;
 @property (nonatomic) RecieptDetailViewController *receiptDetailController;
+@property (nonatomic) BOOL usingPayPal;
 
 @end
 
@@ -394,11 +396,43 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.processingModal dismissWithClickedButtonIndex:0 animated:YES];
-        self.receiptDetailController = [self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptDetailViewController"];
-        self.receiptDetailController.isFromScanner = YES;
-        self.receiptDetailController.parser = self.parser;
-        self.receiptDetailController.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:self.receiptDetailController animated:YES];
+        
+        if (self.usingPayPal) {
+            PRPayPalViewController *payController = [self.storyboard instantiateViewControllerWithIdentifier:@"PRPayPalViewController"];
+            payController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:payController animated:YES];
+        }
+        else
+        {
+            self.receiptDetailController = [self.storyboard instantiateViewControllerWithIdentifier:@"ReceiptDetailViewController"];
+            self.receiptDetailController.isFromScanner = YES;
+            self.receiptDetailController.parser = [self.parser copy];
+            self.receiptDetailController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:self.receiptDetailController animated:YES];
+        }
+
+    });
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (buttonIndex == 0) {
+            NSLog(@"No");
+            self.usingPayPal = NO;
+        }
+        else {
+            NSLog(@"Yes");
+            self.usingPayPal = YES;
+        }
+        
+        self.processingModal = [[UIAlertView alloc] initWithTitle:@"Please Wait"
+                                                          message:@"Processing"
+                                                         delegate:self
+                                                cancelButtonTitle:nil
+                                                otherButtonTitles:nil, nil];
+        
+        [self.processingModal show];
     });
 }
 
@@ -407,13 +441,12 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 - (void)getTextFromImage:(UIImage*)image
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.processingModal = [[UIAlertView alloc] initWithTitle:@"Please Wait"
-                                                          message:@"Processing"
-                                                         delegate:self
-                                                cancelButtonTitle:nil
-                                                otherButtonTitles:nil, nil];
+        [[[UIAlertView alloc] initWithTitle:@"Out With Friends?"
+                                    message:@"Pay Your Share With PayPal"
+                                   delegate:self
+                          cancelButtonTitle:nil
+                          otherButtonTitles:@"No", @"Yes", nil] show];
         
-        [self.processingModal show];
     });
     
     dispatch_queue_t processQueue = dispatch_queue_create("process queue", DISPATCH_QUEUE_SERIAL);

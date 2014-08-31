@@ -9,6 +9,7 @@
 #import "PRTrendsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #include "XYPieChart.h"
+#import "PayPalMobile.h"
 
 @interface PRTrendsViewController () <XYPieChartDelegate, XYPieChartDataSource>
 @property (strong, nonatomic) IBOutlet XYPieChart *pieChartRight;

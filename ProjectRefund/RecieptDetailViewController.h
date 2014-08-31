@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PRTextParser.h"
 
+@class PRTextParser;
 @class RecieptItem;
 
 @interface RecieptDetailViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>

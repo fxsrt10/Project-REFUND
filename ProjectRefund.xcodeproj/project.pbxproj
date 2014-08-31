@@ -28,7 +28,6 @@
 		FD1F471A19B277070099E89E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F471819B277070099E89E /* CoreData.framework */; };
 		FD1F471B19B277070099E89E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F471919B277070099E89E /* CoreFoundation.framework */; };
 		FD1F471D19B2770C0099E89E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1F471C19B2770C0099E89E /* AVFoundation.framework */; };
-		FD1F472119B279040099E89E /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = FD1F471E19B279040099E89E /* tessdata */; };
 		FD1F472219B279040099E89E /* tesseract-ios in Resources */ = {isa = PBXBuildFile; fileRef = FD1F471F19B279040099E89E /* tesseract-ios */; };
 		FD1F472319B279040099E89E /* tesseract-ios-lib in Resources */ = {isa = PBXBuildFile; fileRef = FD1F472019B279040099E89E /* tesseract-ios-lib */; };
 		FD1F472619B2794F0099E89E /* UIImage+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1F472519B2794F0099E89E /* UIImage+Filters.m */; };
@@ -43,6 +42,12 @@
 		FDBE747C19B2E0C000FD68B2 /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBE747B19B2E0C000FD68B2 /* XYPieChart.m */; };
 		FDBE747E19B2E0D000FD68B2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE747D19B2E0D000FD68B2 /* QuartzCore.framework */; };
 		FDBE748119B2E14100FD68B2 /* PRTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBE748019B2E14100FD68B2 /* PRTrendsViewController.m */; };
+		FDBE748319B2EE0300FD68B2 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = FDBE748219B2EE0300FD68B2 /* tessdata */; };
+		FDBE748F19B3095500FD68B2 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE748719B3095500FD68B2 /* libPayPalMobile.a */; };
+		FDBE749219B30A3C00FD68B2 /* PRPayPalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBE749119B30A3C00FD68B2 /* PRPayPalViewController.m */; };
+		FDBE749419B313D500FD68B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE749319B313D500FD68B2 /* CoreLocation.framework */; };
+		FDBE749619B313DA00FD68B2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE749519B313DA00FD68B2 /* MessageUI.framework */; };
+		FDBE749819B313E500FD68B2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE749719B313E500FD68B2 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +89,6 @@
 		FD1F471819B277070099E89E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FD1F471919B277070099E89E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FD1F471C19B2770C0099E89E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		FD1F471E19B279040099E89E /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "../../Frameworks:SDKs/Tesseract/tessdata"; sourceTree = "<group>"; };
 		FD1F471F19B279040099E89E /* tesseract-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "tesseract-ios"; path = "../../Frameworks:SDKs/Tesseract/tesseract-ios"; sourceTree = "<group>"; };
 		FD1F472019B279040099E89E /* tesseract-ios-lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "tesseract-ios-lib"; path = "../../Frameworks:SDKs/Tesseract/tesseract-ios-lib"; sourceTree = "<group>"; };
 		FD1F472419B2794F0099E89E /* UIImage+Filters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Filters.h"; sourceTree = "<group>"; };
@@ -108,6 +112,20 @@
 		FDBE747D19B2E0D000FD68B2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FDBE747F19B2E14100FD68B2 /* PRTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTrendsViewController.h; sourceTree = "<group>"; };
 		FDBE748019B2E14100FD68B2 /* PRTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRTrendsViewController.m; sourceTree = "<group>"; };
+		FDBE748219B2EE0300FD68B2 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "../../Frameworks:SDKs/Tesseract/tessdata"; sourceTree = "<group>"; };
+		FDBE748719B3095500FD68B2 /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		FDBE748819B3095500FD68B2 /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
+		FDBE748919B3095500FD68B2 /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		FDBE748A19B3095500FD68B2 /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		FDBE748B19B3095500FD68B2 /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		FDBE748C19B3095500FD68B2 /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		FDBE748D19B3095500FD68B2 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		FDBE748E19B3095500FD68B2 /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		FDBE749019B30A3C00FD68B2 /* PRPayPalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPayPalViewController.h; sourceTree = "<group>"; };
+		FDBE749119B30A3C00FD68B2 /* PRPayPalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPayPalViewController.m; sourceTree = "<group>"; };
+		FDBE749319B313D500FD68B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FDBE749519B313DA00FD68B2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FDBE749719B313E500FD68B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +133,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBE749819B313E500FD68B2 /* SystemConfiguration.framework in Frameworks */,
+				FDBE749619B313DA00FD68B2 /* MessageUI.framework in Frameworks */,
+				FDBE749419B313D500FD68B2 /* CoreLocation.framework in Frameworks */,
 				FDBE747E19B2E0D000FD68B2 /* QuartzCore.framework in Frameworks */,
 				FD1F471D19B2770C0099E89E /* AVFoundation.framework in Frameworks */,
 				FD1F471A19B277070099E89E /* CoreData.framework in Frameworks */,
@@ -123,6 +144,7 @@
 				FD1F45C719B264BF0099E89E /* CoreImage.framework in Frameworks */,
 				FD1F45C519B264520099E89E /* libstdc++.6.0.9.dylib in Frameworks */,
 				FD1F45C319B264140099E89E /* TesseractOCR.framework in Frameworks */,
+				FDBE748F19B3095500FD68B2 /* libPayPalMobile.a in Frameworks */,
 				FD1F458419B242410099E89E /* UIKit.framework in Frameworks */,
 				FD1F458019B242410099E89E /* Foundation.framework in Frameworks */,
 			);
@@ -149,13 +171,14 @@
 				FDBE746419B2B64700FD68B2 /* ViewControllers */,
 				FDBE746319B2B62C00FD68B2 /* ImageProcessing */,
 				FD1F458519B242410099E89E /* ProjectRefund */,
+				FDBE748619B3095500FD68B2 /* PayPalMobile */,
 				FDBE747919B2E0C000FD68B2 /* XYPieChart */,
 				FD1F45A719B242410099E89E /* ProjectRefundTests */,
 				FD1F457E19B242410099E89E /* Frameworks */,
 				FD1F457D19B242410099E89E /* Products */,
+				FDBE748219B2EE0300FD68B2 /* tessdata */,
 				FD1F472019B279040099E89E /* tesseract-ios-lib */,
 				FD1F471F19B279040099E89E /* tesseract-ios */,
-				FD1F471E19B279040099E89E /* tessdata */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +194,9 @@
 		FD1F457E19B242410099E89E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDBE749719B313E500FD68B2 /* SystemConfiguration.framework */,
+				FDBE749519B313DA00FD68B2 /* MessageUI.framework */,
+				FDBE749319B313D500FD68B2 /* CoreLocation.framework */,
 				FDBE747D19B2E0D000FD68B2 /* QuartzCore.framework */,
 				FD1F471C19B2770C0099E89E /* AVFoundation.framework */,
 				FD1F471819B277070099E89E /* CoreData.framework */,
@@ -250,6 +276,8 @@
 		FDBE746419B2B64700FD68B2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDBE749019B30A3C00FD68B2 /* PRPayPalViewController.h */,
+				FDBE749119B30A3C00FD68B2 /* PRPayPalViewController.m */,
 				FDBE747F19B2E14100FD68B2 /* PRTrendsViewController.h */,
 				FDBE748019B2E14100FD68B2 /* PRTrendsViewController.m */,
 				FDBE746519B2B70800FD68B2 /* RecieptDetailViewController.h */,
@@ -269,6 +297,22 @@
 				FDBE747B19B2E0C000FD68B2 /* XYPieChart.m */,
 			);
 			path = XYPieChart;
+			sourceTree = "<group>";
+		};
+		FDBE748619B3095500FD68B2 /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE748719B3095500FD68B2 /* libPayPalMobile.a */,
+				FDBE748819B3095500FD68B2 /* PayPalConfiguration.h */,
+				FDBE748919B3095500FD68B2 /* PayPalFuturePaymentViewController.h */,
+				FDBE748A19B3095500FD68B2 /* PayPalMobile.h */,
+				FDBE748B19B3095500FD68B2 /* PayPalOAuthScopes.h */,
+				FDBE748C19B3095500FD68B2 /* PayPalPayment.h */,
+				FDBE748D19B3095500FD68B2 /* PayPalPaymentViewController.h */,
+				FDBE748E19B3095500FD68B2 /* PayPalProfileSharingViewController.h */,
+			);
+			name = PayPalMobile;
+			path = "../../Frameworks:SDKs/PayPalMobile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,7 +398,7 @@
 				FD1F459619B242410099E89E /* Main_iPad.storyboard in Resources */,
 				FD1F472319B279040099E89E /* tesseract-ios-lib in Resources */,
 				FDBE747819B2DB3000FD68B2 /* Images.xcassets in Resources */,
-				FD1F472119B279040099E89E /* tessdata in Resources */,
+				FDBE748319B2EE0300FD68B2 /* tessdata in Resources */,
 				FD1F459319B242410099E89E /* Main_iPhone.storyboard in Resources */,
 				FD1F458A19B242410099E89E /* InfoPlist.strings in Resources */,
 				FD1F472219B279040099E89E /* tesseract-ios in Resources */,
@@ -383,6 +427,7 @@
 				FD1F45BC19B244640099E89E /* PRCamPreviewView.m in Sources */,
 				FD1F459919B242410099E89E /* PRViewController.m in Sources */,
 				FD1F458C19B242410099E89E /* main.m in Sources */,
+				FDBE749219B30A3C00FD68B2 /* PRPayPalViewController.m in Sources */,
 				FDBE747119B2B70800FD68B2 /* RecieptItem.m in Sources */,
 				FDBE747619B2C1AD00FD68B2 /* PRTextParser.m in Sources */,
 				FD1F473419B27E5B0099E89E /* OCRScanner.mm in Sources */,
@@ -544,6 +589,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ProjectRefund/tessdata/tesseract-ios/tesseract-ios-lib/lib",
 					"$(PROJECT_DIR)/ProjectRefund/tessdata/tesseract-ios-lib/lib",
+					"/Users/smeriwether/Development/Frameworks:SDKs/PayPalMobile",
+				);
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -573,6 +623,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ProjectRefund/tessdata/tesseract-ios/tesseract-ios-lib/lib",
 					"$(PROJECT_DIR)/ProjectRefund/tessdata/tesseract-ios-lib/lib",
+					"/Users/smeriwether/Development/Frameworks:SDKs/PayPalMobile",
+				);
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

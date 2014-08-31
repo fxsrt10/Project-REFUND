@@ -64,10 +64,10 @@
     Tesseract* tesseract = [[Tesseract alloc] initWithLanguage:@"eng+ita"];
     tesseract.delegate = self;
     //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"]; //limit search
-    [tesseract setVariableValue:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY‌​Z" forKey:@"tessedit_char_whitelist"];
-    [tesseract setVariableValue:@".,:;'" forKey:@"tessedit_char_blacklist"];
+    [tesseract setVariableValue:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY‌​Z#/$:." forKey:@"tessedit_char_whitelist"];
+    [tesseract setVariableValue:@";'" forKey:@"tessedit_char_blacklist"];
     
-    CGSize newSize = CGSizeMake(image.size.width / 3, image.size.height / 3);
+    CGSize newSize = CGSizeMake(image.size.width, image.size.height);
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
