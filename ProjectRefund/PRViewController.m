@@ -397,8 +397,16 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.processingModal dismissWithClickedButtonIndex:0 animated:YES];
         
+        NSDecimalNumber *sub = [[NSDecimalNumber alloc] initWithString:self.parser.subtotal];
+        NSDecimalNumber *tax = [[NSDecimalNumber alloc] initWithString:self.parser.tax];
+        
         if (self.usingPayPal) {
             PRPayPalViewController *payController = [self.storyboard instantiateViewControllerWithIdentifier:@"PRPayPalViewController"];
+            payController.itemsArray = [self.parser.itemsArray mutableCopy];
+            payController.subtotal = [self.parser.subtotal copy];
+            payController.total = [NSString stringWithFormat:@"%@", [sub decimalNumberByAdding:tax]];
+            payController.tax = [self.parser.tax copy];
+            payController.paymentType = [self.parser.paymentType copy];
             payController.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:payController animated:YES];
         }
@@ -408,7 +416,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
             self.receiptDetailController.isFromScanner = YES;
             self.receiptDetailController.itemsArray = [self.parser.itemsArray mutableCopy];
             self.receiptDetailController.subtotal = [self.parser.subtotal copy];
-            self.receiptDetailController.total = [self.parser.total copy];
+            self.receiptDetailController.total = [NSString stringWithFormat:@"%@", [sub decimalNumberByAdding:tax]];
             self.receiptDetailController.tax = [self.parser.tax copy];
             self.receiptDetailController.paymentType = [self.parser.paymentType copy];
             self.receiptDetailController.hidesBottomBarWhenPushed = YES;
